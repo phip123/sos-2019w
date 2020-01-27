@@ -1,0 +1,17 @@
+#10Clusters-small prop file
+# somtoolbox [GrowingSOM, --numberWinners, 300, --cpus, 8, 
+#   /home/philipp/Documents/Code/Python/sos-2019w/soms/10Clusters-small.prop]
+#
+#Mon Jan 27 14:59:35 CET 2020
+namePrefix=10Clusters-small
+vectorFileName=/home/philipp/Documents/Code/Python/sos-2019w/soms/10clusters.vec
+outputDirectory=/home/philipp/Documents/Code/Python/sos-2019w/soms
+tau=1.0
+sparseData=no
+learnRate=0.7
+workingDirectory=/home/philipp/Documents/Code/Python/sos-2019w/soms
+isNormalized=no
+numIterations=1500
+randomSeed=7
+ySize=25
+xSize=20
