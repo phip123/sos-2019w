@@ -30,12 +30,31 @@ def parse_winner_mapping(file: IO) -> Dict:
     return header
 
 
+def parse_input_vectors(file: IO) -> Dict:
+    lines = file.readlines()
+    lines = list(map(lambda l: l.replace('\n', ''), lines))
+    header = filter(lambda l: l.startswith('$'), lines)
+    header = dict(map(lambda l: (l[1:].split(' ')[0], l.split(' ')[1]), header))
+    header['VEC_DIM'] = int(header['VEC_DIM'])
+    header['XDIM'] = int(header['XDIM'])
+    header['YDIM'] = int(header['YDIM'])
+    vec_dim = header['VEC_DIM']
+    vectors = filter(lambda l: not l.startswith('$'), lines)
+    vectors = map(lambda l: l.split(' '), vectors)
+    vectors = map(lambda l: l[:vec_dim], vectors)
+    vectors = map(lambda l: list(map(lambda v: float(v), l)), vectors)
+    header['VECTORS'] = list(vectors)
+    return header
+
+
 def parse(path: str) -> Optional[Dict]:
     with open(path) as f:
         if path.endswith('.map'):
             return parse_map(f)
         if path.endswith('.dwm'):
             return parse_winner_mapping(f)
+        if path.endswith('.vec'):
+            return parse_input_vectors(f)
     return None
 
 
