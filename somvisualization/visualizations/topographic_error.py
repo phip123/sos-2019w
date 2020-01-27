@@ -29,6 +29,6 @@ def dist(a: Tuple[int, int], b: Tuple[int, int]) -> int:
 
 
 if __name__ == '__main__':
-    map_info = parse('10Clusters-small.map')
-    winner_mapping = parse('10Clusters-small.dwm')
+    map_info = parse('soms/10Clusters-small.map')
+    winner_mapping = parse('soms/10Clusters-small.dwm')
     visualize(map_info=map_info, winner_mapping=winner_mapping)
