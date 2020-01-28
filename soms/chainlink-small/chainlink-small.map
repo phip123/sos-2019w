@@ -1,0 +1,37 @@
+$TYPE som
+$GRID_TOPOLOGY planar
+$GRID_LAYOUT rectangular
+$XDIM 20
+$YDIM 25
+$ZDIM 1
+$VEC_DIM 3
+$STORAGE_DATE 1/28/20 11:10 AM
+$TRAINING_TIME 
+$LEARNRATE_TYPE exponential
+$LEARNRATE_INIT 0.7
+$NEIGHBORHOOD_TYPE exponential
+$NEIGHBORHOOD_INIT 12.5
+$RAND_INIT 7
+$ITERATIONS_TOTAL 1500
+$NR_TRAINVEC_TOTAL 1000
+$ADAPTIVE_COORDINATES_THRESHOLD 
+$VEC_NORMALIZED false
+$QUANTERROR_MAP <error receiving value: Quality measure with name mqe not found.>
+$QUANTERROR_VEC <error receiving value: Quality measure with name mqe not found.>
+$URL_TRAINING_VEC /home/philippp/chainlink/chainlink.vec
+$URL_TRAINING_VEC_DESCR 
+$URL_WEIGHT_VEC /mnt/Volume/Dokumente/Code/Python/sos-2019w/soms/chainlink-small/chainlink-small.wgt
+$URL_QUANTERR_MAP 
+$URL_MAPPED_INPUT_VEC 
+$URL_MAPPED_INPUT_VEC_DESCR 
+$URL_UNIT_DESCR /mnt/Volume/Dokumente/Code/Python/sos-2019w/soms/chainlink-small/chainlink-small.unit
+$URL_TEMPLATE_VECTOR /home/philippp/chainlink/chainlink.tv
+$URL_DATA_WINNER_MAPPING /mnt/Volume/Dokumente/Code/Python/sos-2019w/soms/chainlink-small/chainlink-small.dwm
+$URL_CLASS_INFO 
+$URL_LABELS 
+$METRIC at.tuwien.ifs.somtoolbox.layers.metrics.L2Metric
+$LAYER_REVISION $Revision: 4300 $
+$DESCRIPTION 
+$AVAILABLE_VIS 
+$DATA_TYPE unknown
+$DATA_DIM 

@@ -5,7 +5,7 @@ $XDIM 100
 $YDIM 60
 $ZDIM 1
 $VEC_DIM 10
-$STORAGE_DATE 25/01/2020, 11:21
+$STORAGE_DATE 1/28/20 11:07 AM
 $TRAINING_TIME 
 $LEARNRATE_TYPE exponential
 $LEARNRATE_INIT 0.7
@@ -18,15 +18,15 @@ $ADAPTIVE_COORDINATES_THRESHOLD
 $VEC_NORMALIZED false
 $QUANTERROR_MAP <error receiving value: Quality measure with name mqe not found.>
 $QUANTERROR_VEC <error receiving value: Quality measure with name mqe not found.>
-$URL_TRAINING_VEC /Users/axelbr/Downloads/somtoolbox/datasets/10clusters.vec
+$URL_TRAINING_VEC /home/philippp/10clusters/10clusters.vec
 $URL_TRAINING_VEC_DESCR 
-$URL_WEIGHT_VEC /Users/axelbr/Downloads/somtoolbox/10Clusters-large.wgt
+$URL_WEIGHT_VEC /mnt/Volume/Dokumente/Code/Python/sos-2019w/soms/10-large/10Clusters-large.wgt
 $URL_QUANTERR_MAP 
 $URL_MAPPED_INPUT_VEC 
 $URL_MAPPED_INPUT_VEC_DESCR 
-$URL_UNIT_DESCR /Users/axelbr/Downloads/somtoolbox/10Clusters-large.unit
-$URL_TEMPLATE_VECTOR null
-$URL_DATA_WINNER_MAPPING /Users/axelbr/Downloads/somtoolbox/10Clusters-large.dwm
+$URL_UNIT_DESCR /mnt/Volume/Dokumente/Code/Python/sos-2019w/soms/10-large/10Clusters-large.unit
+$URL_TEMPLATE_VECTOR /home/philippp/10clusters/10clusters.tv
+$URL_DATA_WINNER_MAPPING /mnt/Volume/Dokumente/Code/Python/sos-2019w/soms/10-large/10Clusters-large.dwm
 $URL_CLASS_INFO 
 $URL_LABELS 
 $METRIC at.tuwien.ifs.somtoolbox.layers.metrics.L2Metric

@@ -1,0 +1,18 @@
+#chainlink-small prop file
+# somtoolbox [GrowingSOM, --numberWinners, 300, --cpus, 4, 
+#   /mnt/Volume/Dokumente/Code/Python/sos-2019w/soms/chainlink-small/chainlink-small.prop]
+#
+#Tue Jan 28 11:10:15 CET 2020
+namePrefix=chainlink-small
+vectorFileName=/home/philippp/chainlink/chainlink.vec
+outputDirectory=/mnt/Volume/Dokumente/Code/Python/sos-2019w/soms/chainlink-small
+tau=1.0
+sparseData=no
+learnRate=0.7
+workingDirectory=/mnt/Volume/Dokumente/Code/Python/sos-2019w/soms/chainlink-small
+isNormalized=no
+numIterations=1500
+randomSeed=7
+ySize=25
+templateFileName=/home/philippp/chainlink/chainlink.tv
+xSize=20

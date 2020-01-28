@@ -1,0 +1,18 @@
+#chainling-large prop file
+# somtoolbox [GrowingSOM, --numberWinners, 300, --cpus, 4, 
+#   /mnt/Volume/Dokumente/Code/Python/sos-2019w/soms/chainlink-large/chainling-large.prop]
+#
+#Tue Jan 28 11:09:36 CET 2020
+namePrefix=chainling-large
+vectorFileName=/home/philippp/chainlink/chainlink.vec
+outputDirectory=/mnt/Volume/Dokumente/Code/Python/sos-2019w/soms/chainlink-large
+tau=1.0
+sparseData=no
+learnRate=0.7
+workingDirectory=/mnt/Volume/Dokumente/Code/Python/sos-2019w/soms/chainlink-large
+isNormalized=no
+numIterations=1500
+randomSeed=7
+ySize=60
+templateFileName=/home/philippp/chainlink/chainlink.tv
+xSize=100
