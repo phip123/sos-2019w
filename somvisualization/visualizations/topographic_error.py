@@ -6,7 +6,7 @@ import plotly.express as px
 from somvisualization.io.somlib import parse
 
 
-def visualize(map_info: Dict, winner_mapping: Dict):
+def visualize(map_info: Dict, winner_mapping: Dict, color_palette: str = 'Viridis'):
     x_dim = int(map_info['XDIM'])
     y_dim = int(map_info['YDIM'])
     units = np.zeros((x_dim, y_dim), dtype=int)
@@ -20,7 +20,14 @@ def visualize(map_info: Dict, winner_mapping: Dict):
         if dist(bmu_pos, sbmu_pos) > 1:
             units[bmu_pos[0], bmu_pos[1]] += 1
 
-    fig = px.imshow(units)
+    fig = px.imshow(units, title="Topographic Error", color_continuous_scale=color_palette)
+    # fig.update_traces(dict(showscale=False, coloraxis=None))
+    fig.update_xaxes(dict(side='top'))
+    fig.update_layout(coloraxis_colorbar=dict(
+        thickness=50,
+        dtick=max(np.amax(units) / 5, 1)
+    ))
+
     fig.show()
 
 
@@ -29,6 +36,6 @@ def dist(a: Tuple[int, int], b: Tuple[int, int]) -> int:
 
 
 if __name__ == '__main__':
-    map_info = parse('soms/10Clusters-small.map')
-    winner_mapping = parse('soms/10Clusters-small.dwm')
+    map_info = parse('soms/10Clusters-large.map')
+    winner_mapping = parse('soms/10Clusters-large.dwm')
     visualize(map_info=map_info, winner_mapping=winner_mapping)

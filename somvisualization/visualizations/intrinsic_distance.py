@@ -22,7 +22,7 @@ def calculate_shortest_distances(graph, units, winner_mapping, xdim, ydim):
 
 def visualize(map_info: Dict, winner_mapping: Dict, input_vectors: Dict,
               weighted_vectors: Dict[Tuple[int, int], WeightedVector],
-              dist: Callable = L2.distance):
+              dist: Callable = L2.distance, color_palette: str = 'Viridis'):
     xdim = weighted_vectors['XDIM']
     ydim = weighted_vectors['YDIM']
     units = weighted_vectors['VECTORS']
@@ -30,7 +30,12 @@ def visualize(map_info: Dict, winner_mapping: Dict, input_vectors: Dict,
     shortest_distances = calculate_shortest_distances(graph, units, winner_mapping, xdim, ydim)
     qes = calculate_qe(input_vectors, units, winner_mapping, xdim, ydim)
     intrinsic_distances = shortest_distances + qes
-    fig = px.imshow(intrinsic_distances)
+    fig = px.imshow(intrinsic_distances, color_continuous_scale=color_palette, title='Intrinsic Distance')
+    fig.update_xaxes(dict(side='top'))
+    fig.update_layout(coloraxis_colorbar=dict(
+        thickness=50,
+        dtick=max(np.amax(intrinsic_distances) / 5, 1)
+    ))
     fig.show()
 
 
