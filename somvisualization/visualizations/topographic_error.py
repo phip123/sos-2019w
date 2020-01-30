@@ -6,6 +6,10 @@ import plotly.express as px
 from somvisualization.io.somlib import parse
 
 
+def dist(a: Tuple[int, int], b: Tuple[int, int]) -> int:
+    return abs(a[0] - b[0] + a[1] - b[1])
+
+
 def visualize(map_info: Dict, winner_mapping: Dict, color_palette: str = 'Viridis'):
     x_dim = int(map_info['XDIM'])
     y_dim = int(map_info['YDIM'])
@@ -29,10 +33,6 @@ def visualize(map_info: Dict, winner_mapping: Dict, color_palette: str = 'Viridi
     ))
 
     fig.show()
-
-
-def dist(a: Tuple[int, int], b: Tuple[int, int]) -> int:
-    return abs(a[0] - b[0] + a[1] - b[1])
 
 
 if __name__ == '__main__':
