@@ -10,7 +10,8 @@ def dist(a: Tuple[int, int], b: Tuple[int, int]) -> int:
     return abs(a[0] - b[0] + a[1] - b[1])
 
 
-def visualize(map_info: Dict, winner_mapping: Dict, color_palette: str = 'Viridis'):
+def visualize(map_info: Dict, winner_mapping: Dict,
+                color_palette: str = 'Viridis', title: str = 'Topographic Error'):
     x_dim = int(map_info['XDIM'])
     y_dim = int(map_info['YDIM'])
     units = np.zeros((x_dim, y_dim), dtype=int)
@@ -24,7 +25,7 @@ def visualize(map_info: Dict, winner_mapping: Dict, color_palette: str = 'Viridi
         if dist(bmu_pos, sbmu_pos) > 1:
             units[bmu_pos[0], bmu_pos[1]] += 1
 
-    fig = px.imshow(units, title="Topographic Error", color_continuous_scale=color_palette)
+    fig = px.imshow(units, title=title, color_continuous_scale=color_palette)
     # fig.update_traces(dict(showscale=False, coloraxis=None))
     fig.update_xaxes(dict(side='top'))
     fig.update_layout(coloraxis_colorbar=dict(
