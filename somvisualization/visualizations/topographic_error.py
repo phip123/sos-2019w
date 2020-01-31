@@ -16,6 +16,7 @@ def visualize(map_info: Dict, winner_mapping: Dict,
     y_dim = int(map_info['YDIM'])
     units = np.zeros((x_dim, y_dim), dtype=int)
 
+    # Iterate over each input vector and count the instances where the SBMU is not adjacent to the BMU
     for winner in winner_mapping['MAPPING'].values():
         bmu = winner[0]
         sbmu = winner[1]

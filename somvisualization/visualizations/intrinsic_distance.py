@@ -62,10 +62,18 @@ def visualize(map_info: Dict, winner_mapping: Dict, input_vectors: Dict,
     xdim = weighted_vectors['XDIM']
     ydim = weighted_vectors['YDIM']
     units = weighted_vectors['VECTORS']
+    # Build the graph
     graph = build_graph(xdim, ydim, units, dist)
+
+    # Create matrix (xdim,ydim) where each cell contains the shortest distance to the SBMU
     shortest_distances = calculate_shortest_distances(graph, units, winner_mapping, xdim, ydim)
+
+    # Create matrix (xdim, ydim) where cell contains the qe of the corresponding unit
     qes = calculate_qe(input_vectors, units, winner_mapping, xdim, ydim)
+
+    # Calculate intrinsic distance for each unit
     intrinsic_distances = shortest_distances + qes
+
     fig = px.imshow(intrinsic_distances.T, color_continuous_scale=color_palette, title=title, origin='lower')
     fig.update_layout(coloraxis_colorbar=dict(
         thickness=50,
