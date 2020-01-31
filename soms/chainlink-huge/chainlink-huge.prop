@@ -1,0 +1,19 @@
+#chainlink-huge prop file
+# somtoolbox [GrowingSOM, --numberWinners, 300, --cpus, 24, 
+#   /home/christian/TUWien/Selbstorganisierende 
+#   Systeme/sos-2019w/soms/chainlink-huge/chainlink-huge.prop]
+#
+#Fri Jan 31 16:26:12 CET 2020
+workingDirectory=/home/christian/TUWien/Selbstorganisierende Systeme/sos-2019w/soms/chainlink-huge
+tau=1.0
+templateFileName=/home/christian/TUWien/Selbstorganisierende Systeme/sos-2019w/soms/chainlink/chainlink.tv
+ySize=200
+learnRate=0.7
+randomSeed=7
+numIterations=1500
+namePrefix=chainlink-huge
+vectorFileName=/home/christian/TUWien/Selbstorganisierende Systeme/sos-2019w/soms/chainlink/chainlink.vec
+sparseData=no
+outputDirectory=/home/christian/TUWien/Selbstorganisierende Systeme/sos-2019w/soms/chainlink-huge
+xSize=200
+isNormalized=no

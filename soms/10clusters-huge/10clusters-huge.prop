@@ -1,0 +1,19 @@
+#10clusters-huge prop file
+# somtoolbox [GrowingSOM, --numberWinners, 300, --cpus, 24, 
+#   /home/christian/TUWien/Selbstorganisierende 
+#   Systeme/sos-2019w/soms/10clusters-huge/10clusters-huge.prop]
+#
+#Fri Jan 31 16:24:30 CET 2020
+workingDirectory=/home/christian/TUWien/Selbstorganisierende Systeme/sos-2019w/soms/10clusters-huge
+tau=1.0
+templateFileName=/home/christian/TUWien/Selbstorganisierende Systeme/sos-2019w/soms/10clusters/10clusters.tv
+ySize=200
+learnRate=0.7
+randomSeed=7
+numIterations=1500
+namePrefix=10clusters-huge
+vectorFileName=/home/christian/TUWien/Selbstorganisierende Systeme/sos-2019w/soms/10clusters/10clusters.vec
+sparseData=no
+outputDirectory=/home/christian/TUWien/Selbstorganisierende Systeme/sos-2019w/soms/10clusters-huge
+xSize=200
+isNormalized=no
