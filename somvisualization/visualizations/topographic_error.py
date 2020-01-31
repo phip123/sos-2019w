@@ -25,9 +25,7 @@ def visualize(map_info: Dict, winner_mapping: Dict,
         if dist(bmu_pos, sbmu_pos) > 1:
             units[bmu_pos[0], bmu_pos[1]] += 1
 
-    fig = px.imshow(units, title=title, color_continuous_scale=color_palette)
-    # fig.update_traces(dict(showscale=False, coloraxis=None))
-    fig.update_xaxes(dict(side='top'))
+    fig = px.imshow(units.T, title=title, color_continuous_scale=color_palette,origin='lower')
     fig.update_layout(coloraxis_colorbar=dict(
         thickness=50,
         dtick=max(np.amax(units) / 5, 1)

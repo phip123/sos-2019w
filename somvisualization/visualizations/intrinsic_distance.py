@@ -66,8 +66,7 @@ def visualize(map_info: Dict, winner_mapping: Dict, input_vectors: Dict,
     shortest_distances = calculate_shortest_distances(graph, units, winner_mapping, xdim, ydim)
     qes = calculate_qe(input_vectors, units, winner_mapping, xdim, ydim)
     intrinsic_distances = shortest_distances + qes
-    fig = px.imshow(intrinsic_distances, color_continuous_scale=color_palette, title=title)
-    fig.update_xaxes(dict(side='top'))
+    fig = px.imshow(intrinsic_distances.T, color_continuous_scale=color_palette, title=title, origin='lower')
     fig.update_layout(coloraxis_colorbar=dict(
         thickness=50,
         dtick=max(np.amax(intrinsic_distances) / 5, 1)
